@@ -3,17 +3,17 @@
 Plugin Name: Kleinanzeigen
 Description: Affiliate-System-Plugin für das PSOURCE-Kleinanzeigen-Plugin
 Author URI: https://n3rds.work/docs/kleinanzeigen-handbuch/
-Depends: classifieds/loader.php
-Class: Classifieds_Core
+Depends: kleinanzeigen/loader.php
+Class: Kleinanzeigen_Core
 */
 
-define( 'AFF_CLASSIFIEDS_ADDON', 1 );
+define( 'AFF_KLEINANZEIGEN_ADDON', 1 );
 
-// Register actions only if Classifieds plugin is active.
-if ( affiliate_is_plugin_active( 'classifieds/loader.php' ) || affiliate_is_plugin_active_for_network( 'classifieds/loader.php' ) ) {
+// Register actions only if Kleinanzeigen plugin is active.
+if ( affiliate_is_plugin_active( 'kleinanzeigen/loader.php' ) || affiliate_is_plugin_active_for_network( 'kleinanzeigen/loader.php' ) ) {
 
-	add_action( 'classifieds_set_paid_member', 'cf_affiliate_new_paid', 10, 3 );
-	add_action( 'classifieds_affiliate_settings', 'cf_affiliate_settings' );
+	add_action( 'kleinanzeigen_set_paid_member', 'cf_affiliate_new_paid', 10, 3 );
+	add_action( 'kleinanzeigen_affiliate_settings', 'cf_affiliate_settings' );
 }
 
 function cf_affiliate_new_paid( $affiliate_settings, $user_id, $billing_type ) {
@@ -81,7 +81,7 @@ function cf_affiliate_new_paid( $affiliate_settings, $user_id, $billing_type ) {
 			'IP'					=>	(isset($_SERVER['HTTP_X_FORWARD_FOR'])) ? esc_attr($_SERVER['HTTP_X_FORWARD_FOR']) : esc_attr($_SERVER['REMOTE_ADDR']),
 			//'HTTP_USER_AGENT'		=>	esc_attr($_SERVER['HTTP_USER_AGENT'])
 			);
-			do_action( 'affiliate_purchase', $aff, $amount, 'paid:classifieds', $user_id, $note, $meta );
+			do_action( 'affiliate_purchase', $aff, $amount, 'paid:kleinanzeigen', $user_id, $note, $meta );
 
 			if ( defined( 'AFFILIATE_PAYONCE' ) && AFFILIATE_PAYONCE == 'yes' ) {
 
