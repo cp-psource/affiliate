@@ -47,7 +47,7 @@ function cf_affiliate_new_paid( $affiliate_settings, $user_id, $billing_type ) {
 		if ( 'recurring' == $billing_type ) {
 			$whole      = ( isset( $affiliate_settings['cf_recurring_whole_payment'] ) ) ? $affiliate_settings['cf_recurring_whole_payment'] : '0';
 			$partial    = ( isset( $affiliate_settings['cf_recurring_partial_payment'] ) ) ? $affiliate_settings['cf_recurring_partial_payment'] : '0';
-			$note		= __('Wiederkehrende Kleinanzeigen', 'affiliate');
+			$note		= __('Kleinanzeigen wiederkehrend', 'affiliate');
 		} elseif ( 'one_time' == $billing_type ) {
 			$whole      = ( isset( $affiliate_settings['cf_one_time_whole_payment'] ) ) ? $affiliate_settings['cf_one_time_whole_payment'] : '0';
 			$partial    = ( isset( $affiliate_settings['cf_one_time_partial_payment'] ) ) ? $affiliate_settings['cf_one_time_partial_payment'] : '0';
