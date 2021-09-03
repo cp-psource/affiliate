@@ -2475,7 +2475,7 @@ class affiliateadmin {
 						<option selected="selected" value=""><?php _e( 'Massenaktionen', 'affiliate' ); ?></option>
 						<option value="toggle"><?php _e( 'Aktivierung umschalten', 'affiliate' ); ?></option>
 					</select>
-					<input type="submit" class="button-secondary action" id="doaction2" name="doaction2" value="Apply">
+					<input type="submit" class="button-secondary action" id="doaction2" name="doaction2" value="Anwenden">
 				</div>
 				<div class="alignright actions"></div>
 				<br class="clear">
