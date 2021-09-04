@@ -7,13 +7,13 @@ Depends: verzeichnis/loader.php
 Class: Verzeichnis_Core
 */
 
-define( 'AFF_VERZEICHNIS_ADDON', 1 );
+define( 'AFF_DIRECTORY_ADDON', 1 );
 
-// Register actions only if Verzeichnis plugin is active.
-if ( affiliate_is_plugin_active( 'verzeichnis/loader.php' ) || affiliate_is_plugin_active_for_network( 'verzeichnis/loader.php' ) ) {
+// Register actions only if Directory plugin is active.
+if ( affiliate_is_plugin_active( 'directory/loader.php' ) || affiliate_is_plugin_active_for_network( 'directory/loader.php' ) ) {
 
-	add_action( 'verzeichnis_set_paid_member', 'dr_affiliate_new_paid', 10, 3 );
-	add_action( 'verzeichnis_affiliate_settings', 'dr_affiliate_settings' );
+	add_action( 'directory_set_paid_member', 'dr_affiliate_new_paid', 10, 3 );
+	add_action( 'directory_affiliate_settings', 'dr_affiliate_settings' );
 }
 
 function dr_affiliate_new_paid( $affiliate_settings, $user_id, $billing_type ) {
@@ -81,7 +81,7 @@ function dr_affiliate_new_paid( $affiliate_settings, $user_id, $billing_type ) {
 				'IP'					=>	(isset($_SERVER['HTTP_X_FORWARD_FOR'])) ? esc_attr($_SERVER['HTTP_X_FORWARD_FOR']) : esc_attr($_SERVER['REMOTE_ADDR']),
 				//'HTTP_USER_AGENT'		=>	esc_attr($_SERVER['HTTP_USER_AGENT'])
 			);
-			do_action( 'affiliate_purchase', $aff, $amount, 'paid:verzeichnis', $user_id, $note, $meta );
+			do_action( 'affiliate_purchase', $aff, $amount, 'paid:directory', $user_id, $note, $meta );
 
 			if ( defined( 'AFFILIATE_PAYONCE' ) && AFFILIATE_PAYONCE == 'yes' ) {
 
