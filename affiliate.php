@@ -4,7 +4,7 @@ Plugin Name: PS Partnerprogramm
 Plugin URI: https://n3rds.work/piestingtal-source-project/ps-affiliate/
 Description: Dieses Plugin fügt Deiner Seite ein einfaches Affiliate-System hinzu. Verfolge eingehende Klicks von Affiliate-Referer-Links, die Integration der Auftragsverfolgung in PSeCommerce, bezahlte Bloghosting-Anmeldungen und bezahlte Mitgliedschaftsanmeldungen.
 Author: WebMasterService N@W
-Version: 3.2.4
+Version: 3.2.5
 Author URI: https://n3rds.work
 Domain Path: /affiliateincludes/languages
 */
