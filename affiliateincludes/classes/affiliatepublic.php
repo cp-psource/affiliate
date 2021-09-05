@@ -193,7 +193,7 @@ class affiliate {
 	}
 
 	function detect_location( $level = 1 ) {
-		$directories = explode( VERZEICHNIS_SEPARATOR, dirname( __FILE__ ) );
+		$directories = explode( DIRECTORY_SEPARATOR, dirname( __FILE__ ) );
 
 		$mydir = array();
 		for ( $depth = $level; $depth >= 1; $depth -- ) {
@@ -206,7 +206,7 @@ class affiliate {
 			$this->mylocation = basename( __FILE__ );
 			$level            = 0;
 		} else {
-			$this->mylocation = $mydir . VERZEICHNIS_SEPARATOR . basename( __FILE__ );
+			$this->mylocation = $mydir . DIRECTORY_SEPARATOR . basename( __FILE__ );
 		}
 
 		if ( defined( 'WP_PLUGIN_DIR' ) && file_exists( WP_PLUGIN_DIR . '/' . $this->mylocation ) ) {

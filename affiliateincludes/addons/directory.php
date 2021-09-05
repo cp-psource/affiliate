@@ -3,7 +3,7 @@
 Plugin Name: Verzeichnis
 Description: Affiliate-System-Plugin für das WordPress Verzeichnis-Plugin
 Author URI: https://n3rds.work/docs/verzeichnis-handbuch/
-Depends: verzeichnis/loader.php
+Depends: directory/loader.php
 Class: Verzeichnis_Core
 */
 
