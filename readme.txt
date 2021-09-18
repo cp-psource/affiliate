@@ -26,7 +26,7 @@ Deinen Besuchern einen Anteil am Gewinn zu bieten, indem sie für Deine Webseite
 [Supportforum](https://n3rds.work/forums/forum/psource-support-foren/ps-affiliate-plugin-supportforum/)
 [GitHub](https://github.com/piestingtal-source/affiliate)
 
-== Weitere Piestingtal.Source ==
+== Weitere PSource ==
 
 Dieses Plugin arbeitet natürlich mit anderen PSOURCE Plugins zusammen!
 Hier bitte, wir haben sie Dir hier zusammengestellt:
