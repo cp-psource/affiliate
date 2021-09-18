@@ -1,6 +1,6 @@
 <?php
 /*
-Plugin Name: PS Partnerprogramm
+Plugin Name: PS Affiliate
 Plugin URI: https://n3rds.work/piestingtal-source-project/ps-affiliate/
 Description: Dieses Plugin fügt Deiner Seite ein einfaches Affiliate-System hinzu. Verfolge eingehende Klicks von Affiliate-Referer-Links, die Integration der Auftragsverfolgung in PSeCommerce, bezahlte Bloghosting-Anmeldungen und bezahlte Mitgliedschaftsanmeldungen.
 Author: WebMasterService N@W
