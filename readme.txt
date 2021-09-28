@@ -26,9 +26,9 @@ Deinen Besuchern einen Anteil am Gewinn zu bieten, indem sie für Deine Webseite
 [Supportforum](https://n3rds.work/forums/forum/psource-support-foren/ps-affiliate-plugin-supportforum/)
 [GitHub](https://github.com/piestingtal-source/affiliate)
 
-== Weitere PSource ==
+== Mehr PSource ==
 
-Dieses Plugin arbeitet natürlich mit anderen PSOURCE Plugins zusammen!
+Dieses Plugin arbeitet natürlich mit anderen PSource Plugins zusammen!
 Hier bitte, wir haben sie Dir hier zusammengestellt:
 
 Mit [PSeCommerce](https://n3rds.work/piestingtal_source/psecommerce-shopsystem/) kannst Du Deinen Partnern Provisionen für Verkäufe Deiner Produkte anbieten.
@@ -37,6 +37,20 @@ Mit [PSeCommerce](https://n3rds.work/piestingtal_source/psecommerce-shopsystem/)
 
 Bezahle Provisionen für neue Mitglieder dank des [PS Mitgliedschaften](https://n3rds.work/piestingtal_source/ps-mitgliedschaften-plugin/) Plugins.
 
+Wirf einen Blick in unser [PSOURCE Sortiment](https://n3rds.work/psource_kategorien/psource-plugins/) und hole noch mehr aus Deinem WordPress/ClassicPress!
+
+Halte Dich mit unserem [Newsletter](https://n3rds.work/webmasterservice-n3rdswork-digalize-das-piestingtal/newsletter-management/) über unsere Piestingtal.Source informiert!
+
+== Hilf uns ==
+
+Viele, viele Kaffees konsumieren wir während wir an unseren Plugins und Themes arbeiten.
+Wie wärs? Möchtest Du uns mit einer Kaffee-Spende bei der Arbeit an unseren Plugins unterstützen?
+
+= Unterstütze uns =
+
+Mach eine [Spende per Überweisung oder PayPal](https://n3rds.work/spendenaktionen/unterstuetze-unsere-psource-free-werke/) wir Danken Dir!
+
+Halte Dich mit unserem [Newsletter](https://n3rds.work/webmasterservice-n3rdswork-digalize-das-piestingtal/newsletter-management/) über unsere Piestingtal.Source informiert!
 
 == ChangeLog ==
 
