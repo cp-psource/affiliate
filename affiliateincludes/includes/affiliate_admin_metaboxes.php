@@ -12,7 +12,7 @@ function show_affiliate_admin_metabox_reports_affiliate_link() {
 
 	?>
 	<div class="postbox">
-		<h3 class="hndle" style="cursor:auto;"><span><?php _e('Partnerprogramm Link URL', 'affiliate') ?></span></h3>
+		<h3 class="hndle" style="cursor:auto;"><span><?php _e('Affiliate Link URL', 'affiliate') ?></span></h3>
 		<div class="inside">
 			<table class="form-table">
 			<tr>
@@ -73,7 +73,7 @@ function show_affiliate_admin_metabox_reports_column_settings() {
 					</td>
 				</tr>
 				<tr>
-					<th valign="top" scope="row"><?php _e('Bezahlte Mitglieder','affiliate') ?></th>
+					<th valign="top" scope="row"><?php _e('Bezahlte Mitgliedschaften','affiliate') ?></th>
 					<td valign="top">
 						<input name="paidmembers" type="text" id="paidmembers" style="width: 50%" value="<?php echo htmlentities(stripslashes($headings[2]),ENT_QUOTES, 'UTF-8') ?>" />
 					</td>
@@ -90,7 +90,7 @@ function show_affiliate_admin_metabox_profile_text() {
 <p>Als Dankeschön möchten wir etwas zurückgeben, weshalb wir dieses Partnerprogramm eingerichtet haben.</p>
 <p>Um zu beginnen, aktiviere einfach die Links für Dein Konto und gib unten Deine PayPal-E-Mail-Adresse ein. Weitere Informationen zu unserem Partnerprogramm findest Du auf unserer Hauptseite.</p>", 'affiliate');
 
-		$advsettingstextdefault = __("<p>Es gibt Zeiten, in denen Du Deinen Partnerprogramm-Link lieber ausblenden möchtest oder einfach nicht an die Partnerprogramm-Referenz erinnern musst, statt sie am Ende unserer URL anzubringen.</p>
+		$advsettingstextdefault = __("<p>Es gibt Zeiten, in denen Du Deinen Affiliate-Link lieber ausblenden möchtest oder einfach nicht an die Partnerprogramm-Referenz erinnern musst, statt sie am Ende unserer URL anzubringen.</p>
 <p>Wenn dies der Fall ist, kannst Du die Haupt-URL der Seite eingeben, an die Du Anfragen von unten sendest, und wir werden die kniffligen Teile für Dich erledigen um Deine Partnerprogramm dennoch auszuwerten.</p>", 'affiliate');
 		
 	?>
