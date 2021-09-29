@@ -65,7 +65,7 @@ if ( !class_exists('Puc_v4p10_Plugin_UpdateChecker', false) ):
 			}
 
 			//To prevent a crash during plugin uninstallation, remove updater hooks when the user removes the plugin.
-			//Details: https://github.com/YahnisElsts/plugin-update-checker/issues/138#issuecomment-335590964
+			//Details: https://github.com/YahnisElsts/psource-plugin-updater/issues/138#issuecomment-335590964
 			add_action('uninstall_' . $this->pluginFile, array($this, 'removeHooks'));
 
 			$this->extraUi = new Puc_v4p10_Plugin_Ui($this);

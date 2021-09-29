@@ -8,7 +8,7 @@ Version: 3.2.6
 Author URI: https://n3rds.work
 Domain Path: /affiliateincludes/languages
 */
-require 'psource/psource-plugin-update/plugin-update-checker.php';
+require 'psource/psource-plugin-update/psource-plugin-updater.php';
 $MyUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
 	'https://n3rds.work//wp-update-server/?action=get_metadata&slug=affiliate', 
 	__FILE__, 

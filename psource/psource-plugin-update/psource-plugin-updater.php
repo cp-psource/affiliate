@@ -1,6 +1,6 @@
 <?php
 /**
- * PSource Plugin Updater Library 4.10
+ * PSource Plugin Updater Library 1.10
  * https://n3rds.work/
  *
  * Copyright 2022 DerN3rd
