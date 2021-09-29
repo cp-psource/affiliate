@@ -215,7 +215,7 @@ function affiliate_supporter_settings() {
 	?>
 	<?php if( ! $psts_tabs ) { ?>
 		<div class="postbox">
-		<h3 class="hndle" style="cursor:auto;"><span><?php _e( 'Partnerprogramm Einstellungen', 'affiliate' ) ?></span></h3>
+		<h3 class="hndle" style="cursor:auto;"><span><?php _e( 'Partnerprogram Einstellungen', 'affiliate' ) ?></span></h3>
 	<?php } else {
 		$tab = ProSites_Helper_Tabs_Settings::get_active_tab();
 		ProSites_Helper_Settings::settings_header( $tab );
