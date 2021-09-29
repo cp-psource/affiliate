@@ -210,7 +210,7 @@ if ( !class_exists('Puc_v4p10_Plugin_Ui', false) ):
 				$details = '';
 
 				if ( $status == 'no_update' ) {
-					$message = sprintf(_x('Das %s-Plugin ist auf dem neuesten Stand.', 'the plugin title', 'affiliate'), $title);
+					$message = sprintf(_x('Das %s-Plugin ist laut PSource Server auf dem neuesten Stand.', 'the plugin title', 'affiliate'), $title);
 				} else if ( $status == 'update_available' ) {
 					$message = sprintf(_x('Eine neue Version des %s-Plugins ist auf dem PSource Server verfügbar.', 'the plugin title', 'affiliate'), $title);
 				} else if ( $status === 'error' ) {
