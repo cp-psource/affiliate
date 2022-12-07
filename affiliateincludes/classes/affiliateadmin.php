@@ -1675,7 +1675,7 @@ class affiliateadmin {
 		$menus                            = array();
 		$menus['affiliatesadmin']         = __( 'Partnerberichte', 'affiliate' );
 		$menus['affiliatesadminmanage']   = __( 'Partner verwalten', 'affiliate' );
-		$menus['affiliatesadminsettings'] = __( 'Partnerprogramm-Einstellungen', 'affiliate' );
+		$menus['affiliatesadminsettings'] = __( 'Einstellungen', 'affiliate' );
 		$menus['affiliatesadminaddons']   = __( 'Erweiterungen verwalten', 'affiliate' );
 
 		$menus = apply_filters( 'affiliate_menus', $menus );

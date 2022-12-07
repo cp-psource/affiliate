@@ -4,12 +4,14 @@ Plugin Name: PS Affiliate
 Plugin URI: https://n3rds.work/piestingtal-source-project/ps-affiliate/
 Description: Dieses Plugin fügt Deiner Seite ein einfaches Affiliate-System hinzu. Verfolge eingehende Klicks von Affiliate-Referer-Links, die Integration der Auftragsverfolgung in PSeCommerce, bezahlte Bloghosting-Anmeldungen und bezahlte Mitgliedschaftsanmeldungen.
 Author: WebMasterService N@W
-Version: 3.2.6
+Version: 3.2.7
 Author URI: https://n3rds.work
 Domain Path: /affiliateincludes/languages
 */
+
 require 'psource/psource-plugin-update/psource-plugin-updater.php';
-$MyUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
+use Psource\PluginUpdateChecker\v5\PucFactory;
+$MyUpdateChecker = PucFactory::buildUpdateChecker(
 	'https://n3rds.work//wp-update-server/?action=get_metadata&slug=affiliate', 
 	__FILE__, 
 	'affiliate' 
