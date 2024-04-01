@@ -4,7 +4,7 @@ Plugin Name: PS Affiliate
 Plugin URI: https://cp-psource.github.io/affiliate/
 Description: Dieses Plugin fügt Deiner Seite ein einfaches Affiliate-System hinzu. Verfolge eingehende Klicks von Affiliate-Referer-Links, die Integration der Auftragsverfolgung in PSeCommerce, bezahlte Bloghosting-Anmeldungen und bezahlte Mitgliedschaftsanmeldungen.
 Author: DerN3rd (PSOURCE)
-Version: 3.2.7
+Version: 3.2.8
 Author URI: https://github.com/cp-psource
 Domain Path: /affiliateincludes/languages
 */

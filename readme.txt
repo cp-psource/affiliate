@@ -3,7 +3,7 @@ Contributors: DerN3rd (PSOURCE)
 Tags: multisite, affiliate, provision, marketing
 Requires at least: 4.9
 Tested up to: 5.6
-Stable tag: 3.2.7
+Stable tag: 3.2.8
 Requires PHP: 7.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -25,7 +25,13 @@ Deinen Besuchern einen Anteil am Gewinn zu bieten, indem sie für Deine Webseite
 
 == ChangeLog ==
 
-= 3.2.7 = DerN3rd =
+= 3.2.8 =
+
+* PhP8.3 Fixes
+* JS Fixes
+* Docs hinzugefügt
+
+= 3.2.7 =
 
 * Psource Updater 1.2 (PhP8 Fixes, Security Fixes)
 
@@ -33,7 +39,7 @@ Deinen Besuchern einen Anteil am Gewinn zu bieten, indem sie für Deine Webseite
 
 Umstellung auf PSource Updater v1.1
 
-= 3.2.5 = DerN3rd =
+= 3.2.5 =
 
 * Overhauled von WPMUDEV
 * Release PSOURCE Netzwerksuche
