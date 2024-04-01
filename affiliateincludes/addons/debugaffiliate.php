@@ -3,7 +3,7 @@
 /*
 Plugin Name: Partnerprogramm Debugging
 Description: Fügt dem Affiliate-Plugin ein Debug-System hinzu, um potenzielle Cookie-Probleme aufzuspüren
-Author: DerN3rd (WMS N@W)
+Author: DerN3rd (PSOURCE)
 Author URI: https://n3rds.work
 */
 

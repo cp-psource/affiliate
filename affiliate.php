@@ -1,21 +1,32 @@
 <?php
 /*
 Plugin Name: PS Affiliate
-Plugin URI: https://n3rds.work/piestingtal-source-project/ps-affiliate/
+Plugin URI: https://cp-psource.github.io/affiliate/
 Description: Dieses Plugin fügt Deiner Seite ein einfaches Affiliate-System hinzu. Verfolge eingehende Klicks von Affiliate-Referer-Links, die Integration der Auftragsverfolgung in PSeCommerce, bezahlte Bloghosting-Anmeldungen und bezahlte Mitgliedschaftsanmeldungen.
-Author: WebMasterService N@W
+Author: DerN3rd (PSOURCE)
 Version: 3.2.7
-Author URI: https://n3rds.work
+Author URI: https://github.com/cp-psource
 Domain Path: /affiliateincludes/languages
 */
 
-require 'psource/psource-plugin-update/psource-plugin-updater.php';
-use Psource\PluginUpdateChecker\v5\PucFactory;
-$MyUpdateChecker = PucFactory::buildUpdateChecker(
-	'https://n3rds.work//wp-update-server/?action=get_metadata&slug=affiliate', 
-	__FILE__, 
-	'affiliate' 
+/**
+ * @@@@@@@@@@@@@@@@@ PS UPDATER 1.3 @@@@@@@@@@@
+ **/
+require 'psource/psource-plugin-update/plugin-update-checker.php';
+use YahnisElsts\PluginUpdateChecker\v5\PucFactory;
+ 
+$myUpdateChecker = PucFactory::buildUpdateChecker(
+	'https://github.com/cp-psource/affiliate',
+	__FILE__,
+	'affiliate'
 );
+ 
+//Set the branch that contains the stable release.
+$myUpdateChecker->setBranch('master');
+
+/**
+ * @@@@@@@@@@@@@@@@@ ENDE PS UPDATER 1.3 @@@@@@@@@@@
+ **/
 
 require_once(plugin_dir_path( __FILE__ ) . 'affiliateincludes/includes/config.php');
 require_once(plugin_dir_path( __FILE__ ) . 'affiliateincludes/includes/functions.php');
