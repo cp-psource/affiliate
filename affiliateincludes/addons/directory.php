@@ -2,9 +2,9 @@
 /*
 Plugin Name: Verzeichnis
 Description: Affiliate-System-Plugin für das WordPress Verzeichnis-Plugin
-Author URI: https://n3rds.work/docs/verzeichnis-handbuch/
+Author URI: https://cp-psource.github.io/directory/
 Depends: directory/loader.php
-Class: Verzeichnis_Core
+Class: Directory_Core
 */
 
 define( 'AFF_DIRECTORY_ADDON', 1 );
