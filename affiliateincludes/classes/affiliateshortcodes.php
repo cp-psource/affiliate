@@ -1654,7 +1654,7 @@ class affiliateshortcodes {
 
 		$html .= $prefix;
 
-		do_action('affiliate_purchase', 1, 21.75, 'psecommerce', 1, 'Partnerprogramm-Zahlung für PSeCommerce-Bestellung.');
+		do_action('affiliate_purchase', 1, 21.75, 'marketpress', 1, 'Partnerprogramm-Zahlung für MarketPress-Bestellung.');
 
 		$html .= $postfix;
 

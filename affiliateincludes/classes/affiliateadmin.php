@@ -2564,7 +2564,7 @@ class affiliateadmin {
 		if ( isset( $_GET['type'] ) ) {
 			$type = esc_attr( $_GET['type'] );
 			if ( $type == 'paid' ) {
-				$area[] = 'psecommerce';
+				$area[] = 'marketpress';
 			} else if ( $type == 'uniques' ) {
 				$area[] = 'click';
 			} else if ( $type == 'signups' ) {
@@ -2630,12 +2630,12 @@ class affiliateadmin {
 						<td class="affiliate-period"><?php echo $compete_record->period; ?></td>
 						<td class="affiliate-type"><?php
 							$order_label = __( 'Bestellung#', 'affiliate' ) . ' ' . $compete_record->area_id;
-							if ( ( $compete_record->affiliatearea == 'paid:psecommerce' ) && ( ! empty( $compete_record->area_id ) ) ) {
-								if ( ( ! isset( $_GET['page'] ) ) || ( $_GET['page'] != 'psecommerce-orders' ) ) {
+							if ( ( $compete_record->affiliatearea == 'paid:marketpress' ) && ( ! empty( $compete_record->area_id ) ) ) {
+								if ( ( ! isset( $_GET['page'] ) ) || ( $_GET['page'] != 'marketpress-orders' ) ) {
 									global $mp;
 									if ( isset( $mp ) ) {
 										echo '<a title="' . __( 'Bestell Details ansehen', 'affiliate' ) . '" href="' .
-										     admin_url( 'edit.php?post_type=product&page=psecommerce-orders&order_id=' . $compete_record->area_id ) . '">' . $order_label . ' ' . $compete_record->area_id . '</a>';
+										     admin_url( 'edit.php?post_type=product&page=marketpress-orders&order_id=' . $compete_record->area_id ) . '">' . $order_label . ' ' . $compete_record->area_id . '</a>';
 									} else {
 										echo $order_label;
 									}
@@ -2665,7 +2665,7 @@ class affiliateadmin {
 										echo ' -> ' . $compete_record->meta['LOCAL_URL'];
 									}
 								}
-							} else if ( $compete_record->affiliatearea == 'paid:psecommerce' ) {
+							} else if ( $compete_record->affiliatearea == 'paid:marketpress' ) {
 								echo $compete_record->affiliatenote;
 								//echo "compete_record->meta<pre>"; print_r($compete_record->meta); echo "</pre>";
 								if ( ( isset( $compete_record->meta['order_amount'] ) ) && ( ! empty( $compete_record->meta['order_amount'] ) ) ) {
@@ -2683,7 +2683,7 @@ class affiliateadmin {
 							}
 							?></td>
 						<td class="affiliate-amount"><?php
-							if ( $compete_record->affiliatearea == 'paid:psecommerce' ) {
+							if ( $compete_record->affiliatearea == 'paid:marketpress' ) {
 								echo number_format( $compete_record->amount, 2 );
 							} else {
 								echo '&nbsp;';
@@ -2984,7 +2984,7 @@ class affiliateadmin {
 						case 'type':
 							echo '<td>';
 
-							if ( ( $record->affiliatearea == 'paid:psecommerce' ) && ( ! empty( $record->area_id ) ) ) {
+							if ( ( $record->affiliatearea == 'paid:marketpress' ) && ( ! empty( $record->area_id ) ) ) {
 								_e( 'Paid', 'affiliate' );
 							} else if ( substr( $record->affiliatearea, 0, strlen( 'paid:' ) ) == 'paid:' ) {
 								_e( 'Paid', 'affiliate' );
@@ -3008,15 +3008,15 @@ class affiliateadmin {
 							echo '<td>';
 
 							if ( ! empty( $record->affiliatenote ) ) {
-								if ( ( ( $record->affiliatearea == 'paid:psecommerce' ) || ( $record->affiliatearea == 'psecommerce' ) ) && ( ! empty( $record->area_id ) ) ) {
-									_e( 'PSeCommerce', 'affiliate' );
+								if ( ( ( $record->affiliatearea == 'paid:marketpress' ) || ( $record->affiliatearea == 'marketpress' ) ) && ( ! empty( $record->area_id ) ) ) {
+									_e( 'MarketPress', 'affiliate' );
 									//echo "meta<pre>"; print_r(unserialize($record->meta)); echo "</pre>";
 									global $mp;
 									if ( ( isset( $mp ) ) && ( current_user_can( 'edit_others_posts' ) ) ) {
 										if ( isset( $record->meta['blog_id'] ) ) {
-											$order_href = get_admin_url( $record->meta['blog_id'], 'edit.php?post_type=product&page=psecommerce-orders&order_id=' . $record->area_id );
+											$order_href = get_admin_url( $record->meta['blog_id'], 'edit.php?post_type=product&page=marketpress-orders&order_id=' . $record->area_id );
 										} else {
-											$order_href = admin_url( 'edit.php?post_type=product&page=psecommerce-orders&order_id=' . $record->area_id );
+											$order_href = admin_url( 'edit.php?post_type=product&page=marketpress-orders&order_id=' . $record->area_id );
 										}
 										echo ' <a title="' . __( 'Bestell Details ansehen', 'affiliate' ) . '" href="' . $order_href . '">' . __( 'Bestellung#', 'affiliate' ) . ' ' . $record->area_id . '</a>';
 									} else {

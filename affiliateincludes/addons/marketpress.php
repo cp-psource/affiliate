@@ -1,15 +1,15 @@
 <?php
 /*
-Plugin Name: PSeCommerce
-Description: Partnerprogramm-System-Plugin für das PSeCommerce-Plugin. Wird verwendet, um Einkäufe von Partnerempfehlungen zu verfolgen.
-Author URI: https://n3rds.work/piestingtal-source-project/psecommerce-plugin/
+Plugin Name: MarketPress
+Description: Partnerprogramm-System-Plugin für das MarketPress-Plugin. Wird verwendet, um Einkäufe von Partnerempfehlungen zu verfolgen.
+Author URI: https://n3rds.work/piestingtal-source-project/marketpress-plugin/
 Network: false
-Depends: psecommerce/psecommerce.php
-Class: PSeCommerce
+Depends: marketpress/marketpress.php
+Class: MarketPress
 */
 
 // Register actions only if MarketPress is active.
-if ( affiliate_is_plugin_active( 'psecommerce/psecommerce.php' ) || affiliate_is_plugin_active_for_network( 'psecommerce/psecommerce.php' ) ) {
+if ( affiliate_is_plugin_active( 'marketpress/marketpress.php' ) || affiliate_is_plugin_active_for_network( 'marketpress/marketpress.php' ) ) {
 
 	add_action( 'mp_shipping_process', 'affiliate_marketpress_record_order' );
 	add_action( 'mp_order_paid', 'affiliate_marketpress_paid_order' );
@@ -60,7 +60,7 @@ function aff_mp3_show_metabox( $post ) {
 
 			if ( ( isset( $_GET['order_id'] ) ) && ( ! empty( $_GET['order_id'] ) ) ) {
 				global $affadmin;
-				$affadmin->show_complete_records_table( $aff_user_id, false, array( 'paid:psecommerce' ), intval( $_GET['order_id'] ) );
+				$affadmin->show_complete_records_table( $aff_user_id, false, array( 'paid:marketpress' ), intval( $_GET['order_id'] ) );
 			}
 		}
 	}
@@ -74,7 +74,7 @@ function aff_mp3_paid_order( MP_Order $order ) {
 		return;
 	}
 
-	$sql    = $wpdb->prepare( "SELECT count(id) FROM " . $affiliate->affiliaterecords . " WHERE user_id=%d AND affiliatearea=%s AND area_id=%d", $user_id, "paid:psecommerce", $order->ID );
+	$sql    = $wpdb->prepare( "SELECT count(id) FROM " . $affiliate->affiliaterecords . " WHERE user_id=%d AND affiliatearea=%s AND area_id=%d", $user_id, "paid:marketpress", $order->ID );
 	$result = $wpdb->get_var( $sql );
 	if ( $result > 0 ) {
 		//duplicate
@@ -107,8 +107,8 @@ function aff_mp3_paid_order( MP_Order $order ) {
 	);
 
 	// run the standard affiliate action to do the recording and assigning
-	$note = __( 'Partnerprogramm Zahlung für PSeCommerce Bestellung.', 'affiliate)' );
-	do_action( 'affiliate_purchase', $user_id, $amount, 'paid:psecommerce', $order->ID, $note, $meta );
+	$note = __( 'Partnerprogramm Zahlung für MarketPress Bestellung.', 'affiliate)' );
+	do_action( 'affiliate_purchase', $user_id, $amount, 'paid:marketpress', $order->ID, $note, $meta );
 
 	// record the amount paid / assigned in the meta for the order
 	add_post_meta( $order->ID, 'affiliate_marketpress_order_paid', $amount, true );
@@ -153,7 +153,7 @@ function affiliate_marketpress_order_to_trash($order) {
 		
 		if ((isset($order->mp_shipping_info['affiliate_referrer'])) && (!empty($order->mp_shipping_info['affiliate_referrer']))) {
 			global $affadmin;
-			$compete_records = $affadmin->get_complete_records($order->mp_shipping_info['affiliate_referrer'], false, 'paid:psecommerce', $order->ID);
+			$compete_records = $affadmin->get_complete_records($order->mp_shipping_info['affiliate_referrer'], false, 'paid:marketpress', $order->ID);
 			echo "compete_records<pre>"; print_r($compete_records); echo "</pre>";
 		}
 		die();
@@ -244,8 +244,8 @@ function affiliate_marketpress_paid_order( $order ) {
 		);
 
 		// run the standard affiliate action to do the recording and assigning
-		$note = __( 'Partnerprogramm Zahlung für PSeCommerce Bestellung.', 'affiliate)' );
-		do_action( 'affiliate_purchase', $affiliate_user_id, $amount, 'paid:psecommerce', $order->ID, $note, $meta );
+		$note = __( 'Partnerprogramm Zahlung für MarketPress Bestellung.', 'affiliate)' );
+		do_action( 'affiliate_purchase', $affiliate_user_id, $amount, 'paid:marketpress', $order->ID, $note, $meta );
 
 		// record the amount paid / assigned in the meta for the order
 		add_post_meta( $order->ID, 'affiliate_marketpress_order_paid', $amount, true );
@@ -295,7 +295,7 @@ function affiliate_marketpress_display_metabox( $order ) {
 
 						if ( ( isset( $_GET['order_id'] ) ) && ( ! empty( $_GET['order_id'] ) ) ) {
 							global $affadmin;
-							$affadmin->show_complete_records_table( $order->mp_shipping_info['affiliate_referrer'], false, array( 'paid:psecommerce' ), intval( $_GET['order_id'] ) );
+							$affadmin->show_complete_records_table( $order->mp_shipping_info['affiliate_referrer'], false, array( 'paid:marketpress' ), intval( $_GET['order_id'] ) );
 						}
 					}
 				}

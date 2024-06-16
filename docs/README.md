@@ -1,6 +1,6 @@
 # Affiliates
 
-**Dieses Plugin fügt Deiner Seite ein einfaches Affiliate-System hinzu. Verfolge eingehende Klicks von Affiliate-Referer-Links, die Integration der Auftragsverfolgung in PSeCommerce, bezahlte Bloghosting-Anmeldungen und bezahlte Mitgliedschaftsanmeldungen.**
+**Dieses Plugin fügt Deiner Seite ein einfaches Affiliate-System hinzu. Verfolge eingehende Klicks von Affiliate-Referer-Links, die Integration der Auftragsverfolgung in MarketPress, bezahlte Bloghosting-Anmeldungen und bezahlte Mitgliedschaftsanmeldungen.**
 
 
 ## Affiliates boosts business by making all your users a part of your marketing team.
