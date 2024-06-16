@@ -4,12 +4,12 @@ Plugin Name: PS Bloghosting
 Description: Partnerprogramm System Plugin für das PS Bloghosting Plugin. Erfasst die Partnerprogramm-Transaktion für bezahlte Bloghosting-Upgrades.
 Author URI: https://n3rds.work
 Network: true
-Depends: pro-sites/pro-sites.php
+Depends: ps-bloghosting/pro-sites.php
 Class: ProSites
 */
 
 // Register actions only if Pro Sites is active.
-if ( affiliate_is_plugin_active( 'pro-sites/pro-sites.php' ) || affiliate_is_plugin_active_for_network( 'pro-sites/pro-sites.php' ) ) {
+if ( affiliate_is_plugin_active( 'ps-bloghosting/pro-sites.php' ) || affiliate_is_plugin_active_for_network( 'ps-bloghosting/pro-sites.php' ) ) {
 
 	add_action( 'plugins_loaded', 'affiliate_supporter_hooks' );
 }
