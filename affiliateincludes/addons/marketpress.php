@@ -123,7 +123,7 @@ function aff_mp3_record_order( $order ) {
 }
 
 function aff_mp_addon_add_metabox() {
-	$metabox = new PSOURCE_Metabox( array(
+	$metabox = new WPMUDEV_Metabox( array(
 		'id'          => 'aff-mp-addon-commission',
 		'page_slugs'  => array( 'shop-einstellungen-payments', 'shop-einstellungen_page_shop-einstellungen-payments' ),
 		'title'       => __( 'Partnerprogramm Einstellungen', 'mp' ),
